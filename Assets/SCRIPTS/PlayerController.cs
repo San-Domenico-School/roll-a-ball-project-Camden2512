@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10;
+        speed = 7;
         count = 0;
     }
 
@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
     //listens for the player clicking arrows or W-A-S-D keys
     private void GetPlayerInput()
     {
-        xDirection = Input.GetAxis("Horizontal");
-        zDirection = Input.GetAxis("Vertical"); 
+        xDirection = -Input.GetAxis("Horizontal");
+        zDirection = -Input.GetAxis("Vertical"); 
     }
 
     void OnTriggerEnter(Collider other)
