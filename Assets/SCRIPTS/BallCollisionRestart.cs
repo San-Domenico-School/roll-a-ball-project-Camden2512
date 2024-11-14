@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using UnityEngine;
 using UnityEngine.SceneManagement;  // Required to load and reload scenes
 
 public class BallCollisionRestart : MonoBehaviour
