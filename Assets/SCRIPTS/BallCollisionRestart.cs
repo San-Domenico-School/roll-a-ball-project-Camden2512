@@ -10,10 +10,11 @@ public class BallCollisionRestart : MonoBehaviour
     public string restartTriggerTag = "RestartTrigger";
 
     // This method is called when the ball collides with another object
-    private void OnCollisionEnter(Collision collision)
-    {
+    private void OnTriggerEnter(Collider other)
+
+    {    
         // Check if the object the ball collided with has the "RestartTrigger" tag
-        if (collision.gameObject.CompareTag(restartTriggerTag))
+        if (other.gameObject.CompareTag("RestartTrigger"))
         {
             RestartGame();  // Restart the game if the ball hits the trigger object
         }
@@ -23,6 +24,6 @@ public class BallCollisionRestart : MonoBehaviour
     private void RestartGame()
     {
         // Reload the current scene by its name
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(0);
     }
 }
