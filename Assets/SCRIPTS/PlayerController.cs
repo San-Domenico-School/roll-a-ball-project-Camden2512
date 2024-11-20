@@ -64,7 +64,18 @@ public class PlayerController : MonoBehaviour
             {
                 winTextObject.SetActive(true);
             }
-           
+
+         if (other.gameObject.CompareTag("EndTrigger"))
+            {
+                other.gameObject.SetActive(false);
+                winTextObject.SetActive(false);
+
+            }
+         if (other.gameObject.CompareTag("Endtrigger"))
+            {
+                winTextObject.SetActive(true);
+            }
+
         }
     }
 
